@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link href="9797db890ab115df64f322f6ec8c2cdc" rel="stylesheet" type="text/css">
+
+    <link rel="stylesheet" href="11a54e647e37814b135a6f0ff22b5f24">
+    <!-- Resource style -->
+    <script src="932d90d3eeeec95f906d78b52546ca5e"></script>
+    <!-- Modernizr -->
+    <title>Style Guide | CodyHouse</title>
+  </head>
+  <body>
+    <header>
+      <!-- <div class="cd-logo"><img src="assets/logo.svg" alt="Logo" /></div> -->
+
+      <nav>
+        <ul class="cd-main-nav">
+          <li><a href="#purpose">Purpose</a></li>
+          <li><a href="#colors">Colors</a></li>
+          <li><a href="#typography">Typography</a></li>
+          <li><a href="#navigation">Navigation</a></li>
+        </ul>
+        <!-- cd-main-nav -->
+      </nav>
+
+      <a href="0c1ad1e7b10aa4131796b0da0453a5c6" class="cd-download"><span>Download assets</span></a>
+      <a href="#0" class="cd-nav-trigger">Menu<span></span></a>
+    </header>
+
+    <main>
+      <h1>Style Guide 1.0</h1>
+
+      <section id="purpose" class="cd-purpose">
+        <h2>Purpose/Theme</h2>
+
+        <div class="cd-box"><p>To demonstrate our understanding and proficiency with SCSS and CSS. A page is built in front of the users’ eyes. As the user moves down the page a wall of Lego bricks is being built in front of them and on those bricks are the words and links for the page. The goal is to enact the nostalgia and excitement of seeing something take form piece by piece like when building with Legos. There will be a note letting the user know their interaction is part of the experience. Each time the page is reloaded the build will be unique, using a randomizer for the colors of the blocks.</p></div>
+      </section>
+
+      <section id="colors" class="cd-colors">
+        <h2>Colors</h2>
+
+        <ul>
+          <li class="cd-box"><div class="cd-color-swatch"></div></li>
+
+          <li class="cd-box"><div class="cd-color-swatch"></div></li>
+
+          <li class="cd-box"><div class="cd-color-swatch"></div></li>
+
+          <li class="cd-box"><div class="cd-color-swatch"></div></li>
+
+          <li class="cd-box"><div class="cd-color-swatch"></div></li>
+        </ul>
+      </section>
+
+      <section id="typography" class="cd-typography">
+        <h2>Typography</h2>
+
+        <div class="cd-box">
+          <h1>Heading, <span></span></h1>
+          <p>
+            Aa - <span></span>. Lorem ipsum dolor sit amet, consectetur
+            adipisicing elit. Omnis voluptate distinctio reprehenderit, autem
+            deleniti ad <a href="#0">voluptatum eaque</a>. Optio ea aperiam nisi
+            distinctio nemo repellat, voluptate fugiat. Quidem neque illum,
+            blanditiis!
+          </p>
+        </div>
+      </section>
+
+      <section id="navigation" class="cd-navigation">
+        <h2>Navigation</h2>
+        <div class="cd-box">
+          <div>
+            <h3>Primary</h3>
+            <nav class="cd-primary-nav">
+              <ul>
+                <li><a href="b9abf416ec2b70a86785d2727e017d7f">Mid Century Modern</a></li>
+                <li><a href="0a26bd2e36800f81a79ce1e52c603fa4">Garments</a></li>
+                <li><a href="407af85c69f7f0f8e5ee5bbf9b50634f">Steel</a></li>
+                <li><a href="0b8619130153e7b3183bb3534fe764cb">Apothecary</a></li>
+                <li><a href="ff4a82e5c3b99844509beab0c46a4514">Screen Filler</a></li>
+                <li><a href="2ab610abbdac16594a10f1bce6ea81d6">Fountain Kiss</a></li>
+                <li><a href="2ec0f3b456426c35a8d8a418796f0ede">A robot Named Jimmy</a></li>
+                <li><a href="96a0cc1b62661f4130e9bd05e7cd2db9">Verde Moderna</a></li>
+              </ul>
+            </nav>
+          </div>
+          <div>
+            <h3>Secondary</h3>
+            <nav class="cd-secondary-nav">
+              <ul>
+                <li><a href="ba43b4aeffd95f59e850d07608f456dc">Andrew Lohman</a></li>
+                <li><a href="5e744058fb31e34221c702ce0a1cc167">Dan Mall</a></li>
+                <li><a href="d4b4b14e27956f0442a81f7a8800785b">Steffen Knoeller</a></li>
+                <li><a href="5c349f13933c83e55c9974657eb72f02">Trent Walton</a></li>
+                <li><a href="4cd544a2a56eb5ae3def5b0a02cf13dc">Elliot Jay Stocks</a></li>
+                <li><a href="488de55e38d98032f90f465970097103">Jeremy Carlson</a></li>
+                <li><a href="940fde455838ff5a8b610afec010c2c5">Meltmedia</a></li>
+                <li><a href="a56ff474c1b7fa397994413a70df2062">Dave Shea</a></li>
+              </ul>
+            </nav>
+          </div>
+          <div>
+            <h3>Other Links</h3>
+            <ul>
+              <li><a href="f4928ac5bc377c8daa19ea8124a16a29">View This Designs CSS</a></li>
+              <li><a href="a3f2655ee082a41afee4a4e2c965822c">CSS Resources</a></li>
+              <li><a href="fa67a90b6e984cd5d42a1a16abe327db">FAQ</a></li>
+              <li><a href="823a98281604f3b35a37669caf7b7409">Submit A Design</a></li>
+              <li><a href="211c7eba42acf3c5981880a7d6274b59">Translations</a></li>
+              <li><a href="1d1d6ef7c243ad2e97d9f1992573ccac">HTML Validator</a></li>
+              <li><a href="0521d676e2b1c03c264f1979ac613dc9">CSS VAlidator</a></li>
+              <li><a href="f5fab65fbc48406b834f1a63e249e833">Creative Commons</a></li>
+              <li><a href="e50ff9fc3da250dbc9b6de4dedf81071">Accessibility</a></li>
+              <li><a href="933de55c5b4f73349d14db2481826dad">Zen Garden Github</a></li>
+              <li><a href="9084046ffce4df90e1ecf61178d0018d">Media Temple</a></li>
+              <li><a href="4987c8ea565a800ce2d71d00f73428d6">Zen Garden, The Book</a></li>
+              <li><a href="5774394903681ea52c20c960d0ba192f">HTML File</a></li>
+              <li><a href="157e3ee468b58dc69e34b22652b02e50">CSS File</a></li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <section id="elements" class="cd-elements">
+        <h2>HTML Elements</h2>
+        <div class="cd-box">
+          <p>
+            This is still in development. We want the theme to carry to each aspect of the page. Once we have a working example, we will be better able to determine how to style the other features.
+          </p>
+        </div>
+      </section>
+
+      <section id="wireframes" class="cd-wireframes">
+        <h2>Wireframes</h2>
+        <div class="cd-box">
+          <figure>
+            <img src="85c8b222756d405a75c367588a38e1f9" alt="Small screen wireframe">
+            <figcaption>Small screen</figcaption>
+          </figure>
+          <figure>
+            <img src="13e9831eaf945b4502bc695bcd2018ad" alt="Large screen wireframe">
+            <figcaption>Large screen</figcaption>
+          </figure>
+        </div>
+      </section>
+    </main>
+
+    <script src="109840a1dc8a9cfb9428801d6c53805a"></script>
+  </body>
+</html>
