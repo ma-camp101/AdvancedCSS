@@ -1,0 +1,110 @@
+body {
+  width: 90vw;
+  margin: 0 auto;
+}
+
+.page-wrapper {
+  display: flex;
+  flex-direction: column;
+}
+
+.intro {
+  display: flex;
+  flex-direction: row;
+  flex-flow: row wrap;
+  align-items: center;
+  align-content: space-between;
+  height: 100%;
+}
+
+header {
+  text-align: center;
+  margin-left: 50px;
+}
+
+.summary {
+  text-align: center;
+}
+
+.summary p:first-child {
+  text-align: left;
+}
+
+.preamble {
+  width: 280px;
+}
+
+.main, .wrapper {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 10px;
+}
+
+.explanation, .benefits {
+  grid-column: 2/span 2;
+}
+
+.participation, .requirements, .design-selection {
+  grid-column: 1/span 2;
+}
+
+.participation {
+  grid-row: 2;
+}
+
+.benefits {
+  grid-row: 3;
+}
+
+.requirements {
+  grid-row: 4;
+}
+
+footer {
+  grid-column: 1/span 3;
+  grid-row: 5;
+  justify-self: center;
+}
+
+.wrapper {
+  grid-template-rows: 1fr 1fr 1fr;
+}
+
+.design-selection {
+  grid-row: 1/span 3;
+}
+
+.design-archives {
+  grid-column: 3;
+  grid-row: 1;
+}
+
+.zen-resources {
+  grid-column: 3;
+  grid-row: 2/span 2;
+}
+
+@media only screen and (min-width: 750px) {
+  .intro {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+
+  header {
+    grid-column: 1/span 3;
+    text-align: center;
+  }
+
+  .summary {
+    grid-column: 1/span 3;
+    grid-row: 2;
+  }
+
+  .preamble {
+    grid-column: 1/span 2;
+    grid-row: 3;
+    width: 100%;
+  }
+}
+
+/*# sourceMappingURL=zenGarden.css.map */

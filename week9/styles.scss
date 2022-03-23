@@ -1,0 +1,360 @@
+@import 'typography';
+@import 'icons';
+@import url('https://fonts.googleapis.com/css2?family=Merriweather+Sans:wght@300&display=swap');
+$sm-break: 48em;
+// colors
+$dark-gray: #727272;
+$med-gray: #b4b3b5;
+$light-gray: #eaeaea;
+$body-font: #020202;
+$link-blue: #0076b6; //why do we have both of these blues?
+$byui-blue: #056cb6;
+
+// Utility classes
+*,
+*:before,
+*:after {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+img {
+  max-width: 100%;
+}
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  border: 0;
+}
+header {
+  background-color: $byui-blue;
+  width: 100vw;
+  margin: -8px;
+  height: 58px;
+}
+.site-banner {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.site-banner__left {
+  display: flex;
+  background-color: $body-font;
+  width: 50px;
+  height: 50px;
+  justify-content: center;
+  align-items: center;
+}
+.site-banner__right {
+  width: 100px;
+  justify-content: flex-end;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+.icon-byui-logo, .icon-search, .text-white, .mobile-header-icon {
+  color: $light-gray;
+}
+header form, h1 {
+  display: none;
+}
+a {
+  text-decoration: none;
+}
+.site-banner-2 {
+  display: flex;
+  flex-direction: row;
+  justify-content: right;
+  align-items: center;
+  background-color: $light-gray;
+  width: 100vw;
+  height: 50px;
+  border: solid thin $med-gray;
+}
+.home, .covid, .covidbutton, .newsroom, .gallery, .audience-button,
+.component-spacing, .highlights-link, .highlights-heading-2,
+.col span, .article-date, .article h4 a, .message-title, .message-description {
+  font-family: "BYUI Open Sans";
+}
+.home, .covid, .gallery, .highlights-link, .highlights-heading-2 {
+  font-weight: 400;
+}
+.home {
+  color: $dark-gray;
+  margin-right: 20px;
+}
+main {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  justify-content: center;
+  margin-top: 70px;
+  margin-left: 5px;
+}
+.covid {
+  display: flex;
+  flex-direction: column;
+  width: 95vw;
+  height: 100px;
+  background-color: $body-font;
+  color: $med-gray;
+  text-align: center;
+  font-size: 1.5rem;
+  align-items: center;
+}
+.covid p {
+  margin: 10px;
+}
+.covidbutton {
+  background-color: $link-blue;
+  color: $light-gray;
+  border-radius: 7px;
+  margin: 0 auto;
+  padding: 7px 20px;
+  margin-top: -5px;
+  font-weight: 700;
+  font-size: 1rem;
+}
+.image {
+  width: 95vw;
+}
+.gallery {
+  font-weight: 400;
+  font-size: 1.2rem;
+  color: $byui-blue;
+}
+picture {
+  display: block;
+  width: 95vw;
+  border: solid thin $med-gray;
+}
+.caption,.highlights-link {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 0 20px;
+  margin: 0 0 5px 0;
+}
+.gallerybutton {
+  border: none;
+  font-size: 1.5rem;
+  color: $byui-blue;
+}
+.audience-button {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 95vw;
+  padding: 10px;
+  font-weight: 700;
+  color: $body-font;
+  font-size: .8rem;
+  border-radius: 5px;
+  border: solid thin $link-blue;
+}
+.highlights-heading {
+  background-color: $dark-gray;
+  color: $light-gray;
+  font-size: 1.2rem;
+  padding: 10px;
+  margin-bottom: 0;
+}
+.highlights-link {
+  border: solid thin $med-gray;
+  border-top: none;
+  padding: 10px 5px;
+  margin: 0;
+  margin-top: -20px;
+  color: $byui-blue;
+}
+.component {
+  display: block;
+}
+.highlights-heading-2 {
+  background-color: $byui-blue;
+  color: $light-gray;
+  padding: 10px;
+}
+.highlights-list-2 {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.highlights-link-2 {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 10px;
+  margin-top: -20px;
+  border-bottom: solid thin $med-gray;
+}
+.col span {
+  color: $body-font;
+}
+.spacing {
+  display: block;
+  margin-top: 20px;
+}
+.article {
+  border-top: solid thin $med-gray;
+}
+.article-date, .event-info  {
+  color: $body-font;
+  font-size: .7rem;
+  padding-top: 10px;
+}
+.img-responsive {
+  display: none;
+}
+.article h4 a {
+  color: $link-blue;
+}
+.article-abstract {
+  font-family: 'Merriweather Sans', sans-serif;
+  font-weight: 300;
+  color: $dark-gray;
+  line-height: 1.5rem;
+}
+.buttondiv {
+  width: 95vw;
+  display: flex;
+  flex-direction: row;
+  justify-content: end;
+}
+.newsroom, .btn {
+  width: 120px;
+  background-color: $link-blue;
+  color: $light-gray;
+  padding: 7px 20px;
+  border-radius: 5px;
+  text-align: center;
+  font-weight: 700;
+}
+.message {
+  display: block;
+  width: 95vw;
+  border: solid thin $dark-gray;
+  border-radius: 5px;
+}
+.devo {
+  padding: 20px;
+}
+.message-title {
+  color: $byui-blue;
+}
+.message-description {
+  color: $body-font;
+  font-size: .8rem;
+  padding-bottom: 5px;
+}
+.foot {
+  display: flex;
+  flex-direction: column;
+  height: 78px;
+  justify-items: center;
+}
+.foot img {
+  width: 175px;
+  height: 78px;
+  margin: 0 auto;
+}
+.foot1 {
+  display: flex;
+  flex-direction: row;
+  justify-content: right;
+  align-items: center;
+  background-color: $light-gray;
+  width: 100vw;
+  height: 50px;
+  border: solid thin $med-gray;
+  margin-left: -8px;
+}
+
+@media only screen and (min-width: 575px) {
+  .gallery, picture {
+    width: 60vw;
+    margin: 0 auto;
+  }
+}
+
+@media only screen and (min-width: 765px) {
+  .site-banner-2 {
+    justify-content: left;
+    padding-left: 20px;
+    font-size: 1.5rem;
+    border: none;
+  }
+  main {
+    display: grid;
+    grid-template-columns: 70% 30%;
+    gap: 20px;
+    width: 92vw;
+    margin: 70px auto;
+  }
+  .headline {
+    grid-column: 1;
+  }
+  .covid {
+    width: 100%;
+    margin-bottom: 10px;
+  }
+  .intro {
+    margin-bottom: 20px;
+  }
+  .gallery-box {
+    grid-column: 1;
+    grid-row: 3;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  picture {
+    width: 95%;
+  }
+  .list-box {
+    grid-column: 2;
+    display: flex;
+    flex-direction: column;
+  }
+  .audience-button {
+    width: 100%;
+  }
+  .highlight {
+    margin-top: 15px;
+  }
+  .spacing {
+    grid-column: 1;
+    grid-row: 2;
+  }
+  .img-responsive {
+    display: block;
+    width: 20%;
+    float: left;
+    margin: 20px 10px;
+
+  }
+  .article {
+    display: flex;
+    flex-direction: row;
+  }
+  .article-base {
+    display: block;
+  }
+  .buttondiv {
+    grid-column: 1;
+    grid-row: 3;
+    width: 100%;
+  }
+  .message {
+    grid-column: 2;
+    grid-row: 2;
+    width: 100%;
+    margin-bottom: 200px;
+  }
+}
+
