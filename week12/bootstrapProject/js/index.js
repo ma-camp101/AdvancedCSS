@@ -1,0 +1,1 @@
+import * as bootstrap from 'D:/BYUI/git/AdvancedCSS/parcel/node_modules/bootstrap';

@@ -1,6 +1,9 @@
+$body-bg: rgb(27, 27, 27);
+
+@import "D:/BYUI/git/AdvancedCSS/parcel/node_modules/bootstrap/scss/bootstrap.scss";
 
 .card {
-    border-radius: calc(0.25 rem - 1 px); /* this is what bootstrap used */
+    border-radius: calc(0.25rem - 1px); /* this is what bootstrap used */
     overflow: hidden;
     display: flex;
     flex-flow: column nowrap;
@@ -28,4 +31,4 @@
         gap: 1.5em;
         justify-content: space-around;
     }
-    }
+}
