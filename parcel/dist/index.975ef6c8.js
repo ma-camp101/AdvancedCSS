@@ -519,7 +519,6 @@ function hmrAcceptRun(bundle, id) {
 }
 
 },{}],"8lqZg":[function(require,module,exports) {
-// Import all plugins
 var _bootstrap = require("bootstrap");
 
 },{"bootstrap":"h36JB"}],"h36JB":[function(require,module,exports) {
