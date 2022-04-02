@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css2?family=Chango&family=Open+Sans:ital,wght@0,400;0,700;1,400;1,700&family=Tauri&display=swap");
 @keyframes heading-h1 {
   0% {
     transform: translateX(-200%);
@@ -520,6 +521,8 @@ body {
   width: 90vw;
   margin: 0 auto;
   background: #ffbd00;
+  font-family: "Tauri", "Open Sans", sans serif;
+  font-weight: 400;
 }
 
 /*.page-wrapper {
@@ -575,6 +578,20 @@ header h2:before {
   background: #ada0d3;
   z-index: -1;
   box-shadow: 1.6666666667rem 0 #ada0d3, 3.3333333333rem 0 #ada0d3, 5rem 0 #ada0d3, 6.6666666667rem 0 #ada0d3, 8.3333333333rem 0 #ada0d3, 10rem 0 #ada0d3, 11.6666666667rem 0 #ada0d3, 13.3333333333rem 0 #ada0d3, 15rem 0 #ada0d3, 16.6666666667rem 0 #ada0d3, 18.3333333333rem 0 #ada0d3, 20rem 0 #ada0d3;
+}
+
+h1, h2, h3 {
+  font-family: "Chango", block;
+  font-weight: 400;
+}
+
+a {
+  text-decoration: none;
+  font-weight: 700;
+}
+
+ul {
+  list-style-type: none;
 }
 
 .summary {

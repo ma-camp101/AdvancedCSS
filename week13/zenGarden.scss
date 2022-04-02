@@ -1,4 +1,4 @@
-// @import url('https://fonts.googleapis.com/css2?family=Chango&family=Open+Sans:ital,wght@0,400;0,700;1,400;1,700&family=Tauri&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Chango&family=Open+Sans:ital,wght@0,400;0,700;1,400;1,700&family=Tauri&display=swap');
 @import 'partials/keyframes';
 @import 'partials/mixins';
 $value-1: 1;        //grid stuff
@@ -40,10 +40,10 @@ $larticlePStuds: 22;
 $lfooterHstuds: 4;
 $lfooterLstuds: 10;
 
-// $primary-font: 'Tauri', "Open Sans", sans serif;
-// $secondary-font: 'Chango', block;
-// $font-weight: 400;
-// $font-weight-2: 700;
+$primary-font: 'Tauri', "Open Sans", sans serif;
+$secondary-font: 'Chango', block;
+$font-weight: 400;
+$font-weight-2: 700;
 
 @function calStuds($numStuds, $color) {  //caluates the distance of each stud, tell how many studs to add and the color of the block. Remember don't include the first stud in count. 
     $distances: ();
@@ -68,8 +68,8 @@ body {
     width: 90vw; 
     margin: 0 auto;
     background: $backgroundColor;
-    // font-family: $primary-font;
-    // font-weight: $font-weight;
+    font-family: $primary-font;
+    font-weight: $font-weight;
 }
 
 /*.page-wrapper {
@@ -99,14 +99,17 @@ header h2 {
     @include makeBlock($titleStuds, $blockColor2);
     animation: heading-h2 2s linear;    
 }
-// h1, h2, h3 {
-//     font-family: $secondary-font;
-//     font-weight: $font-weight;
-// }
-// a {
-//     text-decoration: none;
-//     font-weight: $font-weight-2;
-// }
+h1, h2, h3 {
+    font-family: $secondary-font;
+    font-weight: $font-weight;
+}
+a {
+    text-decoration: none;
+    font-weight: $font-weight-2;
+}
+ul {
+    list-style-type: none;
+}
 .summary {
     text-align: center;
 }
