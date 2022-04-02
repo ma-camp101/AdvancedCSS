@@ -1,0 +1,446 @@
+// @import url('https://fonts.googleapis.com/css2?family=Chango&family=Open+Sans:ital,wght@0,400;0,700;1,400;1,700&family=Tauri&display=swap');
+@import 'partials/keyframes';
+@import 'partials/mixins';
+$value-1: 1;        //grid stuff
+$value-2: 2;
+$value-3: 3;
+                    //size stuff
+$gap: 10px;
+$Bheight: 2rem;    //height of one stud to be a unit of measure. Set to the hieght of font root so it somewhat dinamic but not too much
+$Bwidth: $Bheight * calc(5/6); //5:6 ratio height × (5/6) width of one
+$stud-height: $Bwidth * 0.2;  //1.6:8 ratio. Use for space from edge to first stud and double between studs
+$stud-width: $stud-height * 3; 
+$topBottomPadding: 1rem;
+
+$backgroundColor: #ffbd00;      //colors
+$blockColor1:#ff837a;               
+$blockColor2:#CBC3E3;
+$blockColor3:#f2f5aa;  
+$blockColor4:lightblue;
+$blockColor5:#b3f5aa;
+
+$titleStuds: 10;        //number of studs added/block width. +2 for padding and +1 for first for total
+$introStuds: 16;        //for small screen
+$articleHStuds: 8;
+$articlePStuds: 16;
+$footerHstuds: 4;
+$footerLstuds: 6;
+
+$mtitleStuds: 10;        //turns out you can't update a varible in a media query 
+$mintroStuds: 22;         //medium screen
+$marticleHStuds: 8;
+$marticlePStuds: 18;
+$mfooterHstuds: 4;
+$mfooterLstuds: 8;
+
+$ltitleStuds: 10;        //turns out you can't update a varible in a media query 
+$lintroStuds: 28;       //large screen
+$larticleHStuds: 8;
+$larticlePStuds: 22;
+$lfooterHstuds: 4;
+$lfooterLstuds: 10;
+
+// $primary-font: 'Tauri', "Open Sans", sans serif;
+// $secondary-font: 'Chango', block;
+// $font-weight: 400;
+// $font-weight-2: 700;
+
+@function calStuds($numStuds, $color) {  //caluates the distance of each stud, tell how many studs to add and the color of the block. Remember don't include the first stud in count. 
+    $distances: ();
+    @for $i from 1 through $numStuds {          //create a list of the all the distances for each stud
+      $distances: append($distances, calc((($i * 2) * $stud-height) + ($i * $stud-width))); 
+    }
+    $darkColor: darken($color,10%);
+    $shadowbox:(); 
+    @for $i from 1 through $numStuds {      //puts each distance in a property value for the box-shadow property 
+      $shadowbox: append($shadowbox, nth($distances, $i) 0 $darkColor , comma )
+    }
+    @return $shadowbox;
+    
+  }
+
+* {
+   margin: 0;  //complains blocks
+    padding: 0;
+  }
+
+body {
+    width: 90vw; 
+    margin: 0 auto;
+    background: $backgroundColor;
+    // font-family: $primary-font;
+    // font-weight: $font-weight;
+}
+
+/*.page-wrapper {
+    display: flex;
+    flex-direction: column;
+}*/
+
+.intro {
+    display: flex;
+    flex-direction: row;
+    flex-flow: row wrap;
+    justify-content: center;
+    height: 100%;
+}
+
+header {
+    text-align: center;
+    margin-top: $gap; //so we can see the top studs
+    
+    
+}
+header h1 {
+    @include makeBlock($titleStuds, $blockColor1); 
+    animation: heading-h1 1.5s linear;   
+}
+header h2 {
+    @include makeBlock($titleStuds, $blockColor2);
+    animation: heading-h2 2s linear;    
+}
+// h1, h2, h3 {
+//     font-family: $secondary-font;
+//     font-weight: $font-weight;
+// }
+// a {
+//     text-decoration: none;
+//     font-weight: $font-weight-2;
+// }
+.summary {
+    text-align: center;
+}
+
+.summary p:first-child {
+    @include makeBlock($introStuds, $blockColor3); 
+    animation: summary-p1 3s linear;   
+}
+.summary p:nth-child(2) {  
+    @include makeBlock(14, $blockColor4);
+    margin-left: auto;
+    margin-right: auto;  
+    animation: summary-p2 3.5s linear;      
+}
+
+.preamble h3{
+    @include makeBlock($articleHStuds, $blockColor5);
+    animation: preamble-h3 4s linear;
+}
+.preamble p:nth-child(2){
+    @include makeBlock($articlePStuds, $blockColor1); 
+    animation: preamble-p1 4.5s linear;   
+}
+.preamble p:nth-child(3){
+    @include makeBlock($articlePStuds, $blockColor2); 
+    animation: preamble-p2 5s linear;   
+}
+.preamble p:nth-child(4){
+    @include makeBlock($articlePStuds, $blockColor3);  
+    animation: preamble-p3 5.5s linear; 
+}
+.main {
+    display: flex;
+    flex-direction: row;
+    flex-flow: row wrap;
+    justify-content: center;
+    height: 100%;
+}
+.explanation h3{
+    @include makeBlock($articleHStuds, $blockColor4);  
+    animation: explanation-h3 6s linear;   
+}
+.explanation p:nth-child(2){
+    @include makeBlock($articlePStuds, $blockColor5);  
+    animation: explanation-p1 6.5s linear;  
+}
+.explanation p:nth-child(3){
+    @include makeBlock($articlePStuds, $blockColor1); 
+    animation: explanation-p2 7s linear;    
+}
+.participation h3{
+    @include makeBlock($articleHStuds, $blockColor2);   
+    animation: participation-h3 7.8s ease-in; 
+}
+.participation p:nth-child(2){
+    @include makeBlock($articlePStuds, $blockColor3);
+    animation: participation-p1 8.5s linear;    
+}
+.participation p:nth-child(3){
+    @include makeBlock($articlePStuds, $blockColor4); 
+    animation: participation-p2 9s linear;   
+}
+.participation p:nth-child(4){
+    @include makeBlock($articlePStuds, $blockColor5); 
+    animation: participation-p3 9.5s linear;   
+}
+.benefits h3{
+    @include makeBlock($articleHStuds, $blockColor1); 
+    animation: benefits-h3 11s linear;   
+}
+.benefits p:nth-child(2){
+    @include makeBlock($articlePStuds, $blockColor2); 
+    animation: benefits-p1 11.5s linear;   
+}
+.requirements h3{
+    @include makeBlock($articleHStuds, $blockColor3); 
+    animation: requirements-h3 12s linear;   
+}
+.requirements p:nth-child(2){
+    @include makeBlock($articlePStuds, $blockColor4); 
+    animation: requirements-p1 12.5s linear;   
+}
+.requirements p:nth-child(3){
+    @include makeBlock($articlePStuds, $blockColor5);  
+    animation: requirements-p2 13s linear;  
+}
+.requirements p:nth-child(4){
+    @include makeBlock($articlePStuds, $blockColor1); 
+    animation: requirements-p3 13.5s linear;   
+}
+.requirements p:nth-child(5){
+    @include makeBlock($articlePStuds, $blockColor2); 
+    animation: requirements-p4 14s linear;   
+}
+.requirements p:nth-child(6){
+    @include makeBlock($articlePStuds, $blockColor3);   
+    animation: requirements-p5 14.5s linear; 
+}
+footer {
+    /*@include makeBlock(9, $blockColor4);
+    @include calcWidth(9);  //use if indavidual blocks don't work
+    text-align: center;*/
+    display: flex;
+    flex-flow: row nowrap;
+    width: 100%;
+    justify-content: space-evenly;
+    margin: $gap;
+    
+}
+footer a:nth-child(1){     //because I remove the padding all formulas are messed up
+    @include makeBlock(-1, $blockColor4);
+    @include calcWidth(1);
+    text-align: center;
+    padding-left: 0;
+    padding-right: 0;
+    animation: footer 16s ease-in;
+}
+footer a:nth-child(2){
+    @include makeBlock(-1, $blockColor5);
+    @include calcWidth(1);
+    text-align: center;
+    padding-left: 0;
+    padding-right: 0;
+    animation: footer 16.2s linear;
+}
+footer a:nth-child(3){
+    @include makeBlock(-1, $blockColor1);
+    @include calcWidth(1);
+    text-align: center;
+    padding-left: 0;
+    padding-right: 0;
+    animation: footer 16.4s linear;
+}
+footer a:nth-child(4){
+    @include makeBlock(-1, $blockColor2);
+    @include calcWidth(1);
+    text-align: center;
+    padding-left: 0;
+    padding-right: 0;
+    animation: footer 16.6s linear;
+}
+footer a:nth-child(5){
+    @include makeBlock(-1, $blockColor3);
+    @include calcWidth(1);
+    text-align: center;
+    padding-left: 0;
+    padding-right: 0;
+    animation: footer 16.8s linear;
+}
+
+.wrapper {   //kept the grid for the footer cause I liked it
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 10px; 
+}
+
+.select {
+    @include makeBlock($footerHstuds, $blockColor5); 
+    animation: select 16.5s linear;   
+}
+.design-selection {
+    grid-row: $value-1 /span $value-3;
+}
+
+.design-archives {
+    grid-column: $value-3;
+    grid-row: $value-1;
+}
+
+.zen-resources {
+    grid-column: $value-3;
+    grid-row: $value-2 /span $value-2;
+}
+.design-selection nav {
+    @include makeBlock($footerLstuds, $blockColor1);
+    animation: design-selection 18s linear;    
+}
+.archives {
+    @include makeBlock($footerHstuds, $blockColor2); 
+    animation: archives-resources 16.5s linear;   
+}
+.design-archives nav {
+    @include makeBlock($footerLstuds, $blockColor3);
+    animation: archives-resources-list 18s linear;
+}
+.resources {
+    @include makeBlock($footerHstuds, $blockColor4);
+    animation: archives-resources 16.5s linear;
+}
+.zen-resources ul {
+    @include makeBlock($footerLstuds, $blockColor5);
+    animation: archives-resources-list 18s linear; 
+}
+
+
+@media only screen and (min-width: 641px){  //medium screen  pretty much the large code from week 8
+
+
+    .intro {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        justify-content: center;
+        
+        
+    }
+
+    header {
+        grid-column: $value-1 /span $value-3;
+        justify-self: center;
+        text-align: center;
+    }
+
+    .summary {
+        grid-column: $value-1 /span $value-3;
+        justify-self: center;
+        grid-row: $value-2;
+    }
+  
+
+    .preamble {
+        grid-column: $value-1 /span $value-2;
+        grid-row: $value-3;
+        width: 100%;
+        margin-top: $gap;        //breaking up the blocks that don't stack
+    }
+    
+    .main, .wrapper {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        gap: $gap;
+        margin-top: $gap;
+    }
+    
+    .explanation, .benefits {
+        grid-column: $value-2/ span $value-2;
+    }
+    
+    .participation, .requirements, .design-selection {
+        grid-column: $value-1/ span $value-2;
+    }
+    
+    .participation {
+        grid-row: $value-2;
+    }
+    
+    .benefits {
+        grid-row: $value-3;
+    }
+    
+    .requirements {
+        grid-row: 4;
+    }
+
+    footer {
+        grid-column: $value-1/ span $value-3;
+        grid-row: 5;
+        
+    }
+    .wrapper {
+        grid-template-rows: 1fr 1fr 1fr;
+    }
+    
+    .design-selection {
+        grid-row: $value-1 /span $value-3;
+    }
+    
+    .design-archives {
+        grid-column: $value-3;
+        grid-row: $value-1;
+    }
+    
+    .zen-resources {
+        grid-column: $value-3;
+        grid-row: $value-2 /span $value-2;
+    }
+    //for updating the size of each block thats changing
+    header h1 {@include updateBlock($mtitleStuds, $blockColor1);}
+header h2 {@include updateBlock($mtitleStuds, $blockColor2);}
+.summary p:first-child {@include updateBlock($mintroStuds, $blockColor3);}
+.preamble h3{@include updateBlock($marticleHStuds, $blockColor5);}
+.preamble p:nth-child(2){@include updateBlock($marticlePStuds, $blockColor1);}
+.preamble p:nth-child(3){@include updateBlock($marticlePStuds, $blockColor2);}
+.preamble p:nth-child(4){@include updateBlock($marticlePStuds, $blockColor3);}
+.explanation h3{@include updateBlock($marticleHStuds, $blockColor4);}
+.explanation p:nth-child(2){@include updateBlock($marticlePStuds, $blockColor5);}
+.explanation p:nth-child(3){@include updateBlock($marticlePStuds, $blockColor1);}
+.participation h3{@include updateBlock($marticleHStuds, $blockColor2);}
+.participation p:nth-child(2){@include updateBlock($marticlePStuds, $blockColor3);}
+.participation p:nth-child(3){@include updateBlock($marticlePStuds, $blockColor4);}
+.participation p:nth-child(4){@include updateBlock($marticlePStuds, $blockColor5);}
+.benefits h3{@include updateBlock($marticleHStuds, $blockColor1);}
+.benefits p:nth-child(2){@include updateBlock($marticlePStuds, $blockColor2);}
+.requirements h3{@include updateBlock($marticleHStuds, $blockColor3);}
+.requirements p:nth-child(2){@include updateBlock($marticlePStuds, $blockColor4);}
+.requirements p:nth-child(3){@include updateBlock($marticlePStuds, $blockColor5);}
+.requirements p:nth-child(4){@include updateBlock($marticlePStuds, $blockColor1);}
+.requirements p:nth-child(5){@include updateBlock($marticlePStuds, $blockColor2);}
+.requirements p:nth-child(6){@include updateBlock($marticlePStuds, $blockColor3);}
+.select {@include updateBlock($mfooterHstuds, $blockColor5);}
+.design-selection nav {@include updateBlock($mfooterLstuds, $blockColor1);}
+.archives {@include updateBlock($mfooterHstuds, $blockColor2);}
+.design-archives nav {@include updateBlock($mfooterLstuds, $blockColor3);}
+.resources {@include updateBlock($mfooterHstuds, $blockColor4);}
+.zen-resources ul {@include updateBlock($mfooterLstuds, $blockColor5);}
+}
+@media only screen and (min-width: 1008px) {  //large screen
+    
+    header h1 {@include updateBlock($ltitleStuds, $blockColor1);}
+    header h2 {@include updateBlock($ltitleStuds, $blockColor2);}
+    .summary p:first-child {@include updateBlock($lintroStuds, $blockColor3);}
+    .preamble h3{@include updateBlock($larticleHStuds, $blockColor5);}
+    .preamble p:nth-child(2){@include updateBlock($larticlePStuds, $blockColor1);}
+    .preamble p:nth-child(3){@include updateBlock($larticlePStuds, $blockColor2);}
+    .preamble p:nth-child(4){@include updateBlock($larticlePStuds, $blockColor3);}
+    .explanation h3{@include updateBlock($larticleHStuds, $blockColor4);}
+    .explanation p:nth-child(2){@include updateBlock($larticlePStuds, $blockColor5);}
+    .explanation p:nth-child(3){@include updateBlock($larticlePStuds, $blockColor1);}
+    .participation h3{@include updateBlock($larticleHStuds, $blockColor2);}
+    .participation p:nth-child(2){@include updateBlock($larticlePStuds, $blockColor3);}
+    .participation p:nth-child(3){@include updateBlock($larticlePStuds, $blockColor4);}
+    .participation p:nth-child(4){@include updateBlock($larticlePStuds, $blockColor5);}
+    .benefits h3{@include updateBlock($larticleHStuds, $blockColor1);}
+    .benefits p:nth-child(2){@include updateBlock($larticlePStuds, $blockColor2);}
+    .requirements h3{@include updateBlock($larticleHStuds, $blockColor3);}
+    .requirements p:nth-child(2){@include updateBlock($larticlePStuds, $blockColor4);}
+    .requirements p:nth-child(3){@include updateBlock($larticlePStuds, $blockColor5);}
+    .requirements p:nth-child(4){@include updateBlock($larticlePStuds, $blockColor1);}
+    .requirements p:nth-child(5){@include updateBlock($larticlePStuds, $blockColor2);}
+    .requirements p:nth-child(6){@include updateBlock($larticlePStuds, $blockColor3);}
+    .select {@include updateBlock($lfooterHstuds, $blockColor5);}
+    .design-selection nav {@include updateBlock($lfooterLstuds, $blockColor1);}
+    .archives {@include updateBlock($lfooterHstuds, $blockColor2);}
+    .design-archives nav {@include updateBlock($lfooterLstuds, $blockColor3);}
+    .resources {@include updateBlock($lfooterHstuds, $blockColor4);}
+    .zen-resources ul {@include updateBlock($lfooterLstuds, $blockColor5);}
+    
+}

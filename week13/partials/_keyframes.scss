@@ -1,0 +1,202 @@
+@keyframes heading-h1 {
+    0% { transform: translateX(-200%); }
+    100% { transform: translateX(0%); }
+}
+@keyframes heading-h2 {
+    0% { transform: translate(250%, 10px); }
+    90% { transform: translate(0%, 10px); }
+    100% { transform: translate(0%, 0); }
+}
+@keyframes summary-p1 {
+    0% { transform: translate(250%, 20px); }
+    50% { transform: translate(250%, 20px); }
+    55% { transform: translate(200%, 30px); }
+    75% { transform: translate(50%, 35px); }
+    85% { transform: translate(0%, 20px); }
+    100% { transform: translate(0%, 0);}
+}
+@keyframes summary-p2 {
+    0% { transform: translate(250%, 30px); }
+    50% { transform: translate(250%, 30px); }
+    55% { transform: translate(200%, 35px); }
+    75% { transform: translate(50%, 40px); }
+    85% { transform: translate(0%, 30px); }
+    100% { transform: translate(0%, 0); }
+}
+@keyframes preamble-h3 {
+    0% { transform: translate(-200%, 10px); }
+    85% { transform: translate(-200%, 10px); }
+    95% { transform: translate(0%, 10px);}
+    100% { transform: translate(0%, 0);}
+}
+@keyframes preamble-p1 {
+    0% { transform: translateY(20px); opacity: 0%; }
+    80% { transform: translateY(20px); opacity: 0%; }
+    85% { transform: translateY(20px); opacity: 20%; }
+    100% { transform: translateY(0); opacity: 100%; }
+}
+@keyframes preamble-p2 {
+    0% { transform: translateY(30px); opacity: 0%; }
+    80% { transform: translateY(30px); opacity: 0%; }
+    85% { transform: translateY(30px); opacity: 20%; }
+    100% { transform: translateY(0); opacity: 100%; }
+}
+@keyframes preamble-p3 {
+    0% { transform: translateY(40px); opacity: 0%; }
+    80% { transform: translateY(40px); opacity: 0%; }
+    85% { transform: translateY(40px); opacity: 20%; }
+    100% { transform: translateY(0); opacity: 100%; }
+}
+@keyframes explanation-h3 {
+    0% { transform: translate(250%, 15px); }
+    85% { transform: translate(250%, 15px); }
+    95% { transform: translate(0%, 15px); }
+    100% { transform: translate(0%, 0); }
+}
+@keyframes explanation-p1 {
+    0% { transform: translate(-200%, 20px); }
+    80% { transform: translate(-200%, 20px); }
+    85% { transform: translate(-85%, 25px); }
+    95% { transform: translate(-25%, 30px); }
+    98% { transform: translate(0%, 20px); }
+    100% { transform: translate(0%, 0); }
+}
+@keyframes explanation-p2 {
+    0% { transform: translate(-200%, 30px); }
+    80% { transform: translate(-200%, 30px); }
+    85% { transform: translate(-85%, 35px); }
+    95% { transform: translate(-25%, 40px); }
+    98% { transform: translate(0%, 30px); }
+    100% { transform: translate(0%, 0); }
+}
+@keyframes participation-h3 {
+    0% { transform: translate(-200%, 10px); }
+    90% { transform: translate(-200%, 10px); }
+    95% { transform: translate(0%, 10px); }
+    100% { transform: translate(0%, 0); }
+}
+@keyframes participation-p1 {
+    0% { transform: translate(250%, 150px); }
+    90% { transform: translate(250%, 150px); }
+    95% { transform: translate(0%, 10px); }
+    100% { transform: translate(0%, 0); }
+}
+@keyframes participation-p2 {
+    0% { transform: translate(-200%, 160px); }
+    90% { transform: translate(-200%, 160px); }
+    95% { transform: translate(0%, 20px); }
+    100% { transform: translate(0%, 0); }
+}
+@keyframes participation-p3 {
+    0% { transform: translate(250%, 200px); }
+    90% { transform: translate(250%, 200px); }
+    95% { transform: translate(0%, 30px); }
+    100% { transform: translate(0%, 0); }
+}
+@keyframes benefits-h3 {
+    0% { transform: translateY(20px); opacity: 0%; }
+    80% { transform: translateY(20px); opacity: 0%; }
+    85% { transform: translateY(20px) scale(1); opacity: 20%; }
+    88% { transform: translateY(20px) scale(1.2); opacity: 30%; }
+    90% { transform: translateY(20px) scale(1); opacity: 50%; }
+    95% { transform: translateY(20px) scale(1.2); opacity: 70%; }
+    100% { transform: translateY(0) scale(1); opacity: 100%; }
+}
+@keyframes benefits-p1 {
+    0% { transform: translate(-200%, 20px); }
+    80% { transform: translate(-200%, 20px); }
+    85% { transform: translate(-85%, 30px); }
+    90% { transform: translate(-50%, 35px); }
+    95% { transform: translate(0%, 20px); }
+    100% { transform: translate(0%, 0);}
+}
+@keyframes requirements-h3 {
+    0% { transform: translate(500%, 20px); }
+    80% { transform: translate(500%, 20px); }
+    85% { transform: translate(150%, 30px); }
+    90% { transform: translate(50%, 35px); }
+    95% { transform: translate(0%, 20px); }
+    100% { transform: translate(0%, 0);}
+}
+@keyframes requirements-p1 {
+    0% { transform: translate(-200%, 20px); }
+    80% { transform: translate(-200%, 20px); }
+    82% { transform: translate(-95%, 35px); }
+    84% { transform: translate(-85%, 20px); }
+    86% { transform: translate(-75%, 35px); }
+    88% { transform: translate(-55%, 20px); }
+    90% { transform: translate(-35%, 35px); }
+    95% { transform: translate(0%, 20px); }
+    100% { transform: translate(0%, 0);}
+}
+@keyframes requirements-p2 {
+    0% { transform: translate(250%, 20px); }
+    80% { transform: translate(250%, 20px); }
+    82% { transform: translate(175%, 35px); }
+    84% { transform: translate(150%, 20px); }
+    86% { transform: translate(125%, 35px); }
+    88% { transform: translate(100%, 20px); }
+    90% { transform: translate(75%, 35px); }
+    95% { transform: translate(0%, 20px); }
+    100% { transform: translate(0%, 0);}
+}
+@keyframes requirements-p3 {
+    0% { transform: translate(-200%, 20px); }
+    80% { transform: translate(-200%, 20px); }
+    82% { transform: translate(-95%, 35px); }
+    84% { transform: translate(-85%, 20px); }
+    86% { transform: translate(-75%, 35px); }
+    88% { transform: translate(-55%, 20px); }
+    90% { transform: translate(-35%, 35px); }
+    95% { transform: translate(0%, 20px); }
+    100% { transform: translate(0%, 0);}
+}
+@keyframes requirements-p4 {
+    0% { transform: translate(250%, 20px); }
+    80% { transform: translate(250%, 20px); }
+    82% { transform: translate(175%, 35px); }
+    84% { transform: translate(150%, 20px); }
+    86% { transform: translate(125%, 35px); }
+    88% { transform: translate(100%, 20px); }
+    90% { transform: translate(75%, 35px); }
+    95% { transform: translate(0%, 20px); }
+    100% { transform: translate(0%, 0);}
+}
+@keyframes requirements-p5 {
+    0% { transform: translate(-200%, 20px); }
+    80% { transform: translate(-200%, 20px); }
+    82% { transform: translate(-95%, 35px); }
+    84% { transform: translate(-85%, 20px); }
+    86% { transform: translate(-75%, 35px); }
+    88% { transform: translate(-55%, 20px); }
+    90% { transform: translate(-35%, 35px); }
+    95% { transform: translate(0%, 20px); }
+    100% { transform: translate(0%, 0);}
+}
+@keyframes footer {
+    0% { transform: translateX(-2000%); }
+    80% { transform: translateX(-2000%); }
+    100% { transform: translateX(0%); }
+}
+@keyframes select {
+    0% { transform: translateX(-200%); }
+    80% { transform: translateX(-200%); }
+    100% { transform: translateX(0%); }
+}
+@keyframes design-selection {
+    0% { transform: translate(-200%, 10px); }
+    80% { transform: translate(-200%, 10px); }
+    95% { transform: translate(0%, 10px); }
+    100% { transform: translate(0%, 0); }
+}
+@keyframes archives-resources {
+    0% { transform: translateX(250%); }
+    80% { transform: translateX(250%); }
+    100% { transform: translateX(0%); }
+}
+@keyframes archives-resources-list {
+    0% { transform: translate(250%, 10px); }
+    80% { transform: translate(250%, 10px); }
+    95% { transform: translate(0%, 10px); }
+    100% { transform: translate(0%, 0); }
+}

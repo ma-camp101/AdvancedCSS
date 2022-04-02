@@ -1,0 +1,31 @@
+@mixin calcWidth($numStuds){   //to calc the width if block so it matches stud 
+    width: calc((1 + $numStuds) * $stud-width + ((1 + $numStuds) * 2) * $stud-height);
+}
+
+@mixin makeBlock($numStuds, $color) {  // configures the element to make it a lego. Tell it how may studs to add and what color to make it. 
+    position: relative;     //can't be absolute or won't work in flex
+    background-color: $color;
+    padding: $topBottomPadding $Bwidth; //need the width to stay uniform for the stud formula 
+    
+    &:before             //everything in before applys to studs
+    {      
+        content: " ";
+        width: $stud-width;       //creates the first stud and sets dimentions
+        height: $stud-height;
+        position: absolute;     //has to be absalute or won't appear at the top
+        top: -$stud-height;   //makes it so the stud disappears behind other things
+        left: $stud-height;    //moves the stud over which should be the same distance as the stud height
+        background: darken($color,10%); //darkens first stud for 3d effect
+        z-index: -1;            //moves the stud over which should be the same distance as the stud height
+        box-shadow: calStuds(calc(2 + $numStuds), $color); //the extra 2 is for the padding
+        
+    }  
+    @include calcWidth($numStuds)
+}
+
+@mixin updateBlock($numStuds, $color) {  //use to change the size, color needs to be the same as assigned in small
+    &:before{
+    box-shadow: calStuds(calc(2 + $numStuds), $color); //the extra 2 is for the padding
+    }
+    @include calcWidth($numStuds);
+}
